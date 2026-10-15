@@ -1,0 +1,38 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:8201ab15-c731-5e1c-a5fb-063d4a9117b3",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-09T09:06:25Z",
+    "component": {
+      "type": "application",
+      "name": "LOSSLESS_CUT",
+      "version": "5154d0fb5901",
+      "bom-ref": "pkg:generic/anticloud/LOSSLESS_CUT@5154d0fb5901",
+      "purl": "pkg:generic/anticloud/LOSSLESS_CUT@5154d0fb5901",
+      "licenses": [
+        {
+          "license": {
+            "id": "NOASSERTION"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "5154d0fb5901ffbe"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": "https://github.com/the-anticloud/OPENMRS_CORE.git"
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": []
+}

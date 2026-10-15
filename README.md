@@ -1,66 +1,69 @@
 # LOSSLESS_CUT
 
-> Anticloud offline package — upstream: mifi/lossless-cut @ `master`.
+> LosslessCut The swiss army knife of lossless video/audio editing
 
-## What This Project Does
+**Category:** MOVIES_MEDIA · **Ecosystem:** unknown · **Vendored upstream:** https://github.com/mifi/lossless-cut · **Pinned commit:** `2610158c7861e0b96e2020cebcdd3c539ff33830` · **Vendor:** Anticloud FZ LLE
 
-The swiss army knife of lossless video/audio editing
+## What This Project Is
 
-**Topics:** codec, cut, editor, ffmpeg, lossless, losslesscut, player, video, video-editor, video-files
+LosslessCut The swiss army knife of lossless video/audio editing
 
-## Upstream README
+This is the upstream project, vendored at the pinned commit above and packaged offline-first. The 12 improvements Anticloud adds live in `anticloud/` and are described under *Anticloud Overlay* below. Every fact in this file traces to a file in this directory.
 
-<div align="center">
-	<br>
-  <p><a href="https://losslesscut.app/"><img src="src/renderer/src/icon.svg" width="120" alt="LosslessCut" /></a></p>
-  <p><a href="https://losslesscut.app/"><b>LosslessCut</b></a></p>
-  The swiss army knife of lossless video/audio editing
-	<br>
-  <img src="https://github.com/mifi/lossless-cut/workflows/Build/release/badge.svg" />
-  <a href="https://paypal.me/mifino/usd"><img src="https://img.shields.io/badge/Donate-PayPal-green.svg" /></a> <a href="https://github.com/mifi/lossless-cut#download"><img src="https://img.shields.io/github/v/release/mifi/lossless-cut" /></a> <a href="https://discord.gg/fhnEREfUJ3"><img src="https://img.shields.io/discord/986051448385183804" /></a> <a href="https://twitter.com/losslesscut"><img src="https://img.shields.io/twitter/follow/losslesscut?label=Twitter&style=social" alt="Twitter"></a>
-	<br>
-	<br>
-  <a href="https://mifi.no/thanks/">Thanks to my supporters</a> and everyone who purchased LosslessCut!
-	<br>
-	<br>
-  <p align="center"><img src="main_screenshot.jpg" width="600" alt="screenshot" /></p>
-	<br>
-	<br>
-</div>
+## Installation
 
-LosslessCut aims to be the ultimate cross platform FFmpeg GUI for extremely fast and lossless operations on video, audio, subtitle and other related media files.
-The main feature is lossless trimming and cutting of video and audio files, which is great for saving space by rough-cutting your large video files taken from a video camera, GoPro, drone, etc. It lets you quickly extract the good parts from your videos and discard many gigabytes of data without doing a slow re-encode and thereby losing quality. There are also many more [use cases](#typical-workflow). Everything is extremely fast because it does an almost direct data copy, fueled by the awesome FFmpeg which does all the grunt work.
+```
+# See the upstream README (linked above) for build steps.
+```
 
-## Table of contents
+## Usage
 
-- [Features](#features)
-- [Example lossless use cases](#example-lossless-use-cases)
-- [Download](#download)
-- [Supported formats](#supported-formats)
-- [Documentation, usage & getting started](#documentation)
-- [Video demos](#video-demos)
-- [Featured](#featured)
-- [Attributions](#attributions)
+- Cut out commercials from a recorded TV show (and re-format from TS to MP4).
+- Remove audio tracks from a file.
+- Extract music track from a video and cut it to your needs.
+- Add music to a video (or replace existing audio track).
+- Combine audio and video tracks from separate recordings.
+- Include an external subtitle into a video
+- Quickly change a H264/H265 MKV video to MOV or MP4 for playback on iPhone.
+- Import a list of cut times from other tool as a EDL (edit decision list, CSV) and run these cuts with LosslessCut.
+- Export a list of cut times as a CSV EDL and process these in another tool.
+- Quickly cut a file by its MP4/MKV chapters.
+- Quickly cut a [YouTube video](https://youtube-dl.org/) by its chapters (or music times from a comment).
+- Change the language of a file's audio/subtitle tracks.
+- Attach cover art / thumbnail to videos / audio from an external JPEG file or from a frame on the timeline.
+- Change author, title, GPS position, recording time of a video.
+- Fix rotation of a video that has the wrong orientation flag set.
+- Loop a video / audio clip X times quickly without re-encoding, see [#284](https://github.com/mifi/lossless-cut/issues/284).
+- Convert a video or parts of it into X image files (not lossless)
+- Losslessly split a video into one file per scene (note you probably have to shift segments, see [#330](https://github.com/mifi/lossless-cut/issues/330).)
+- Cut away silent parts from an audio/video file.
+- Split video into segments to for example respect Twitter's 140 second limit.
+- Annotate each segment with one or more tags, then use those tags to organize your segments or use it to create an output folder structure or hierarchy for your segments.
 
-## Features
+See also [Recipe cookbook](docs/recipes.md)
 
-- Lossless cutting of most video and audio formats
-- [Smart cut](https://github.com/mifi/lossless-cut/issues/126) (experimental)
-- Losslessly cut out parts of video/audio (for cutting away commercials etc.)
-- Losslessly rearrange the order of video/audio segments
-- Lossless merge/concatenation of arbitrary files (with identical codecs parameters, e.g. from the same camera)
-- Lossless multi track/stream editing
-  - Combine arbitrary tracks from multiple files (ex. add music or subtitle track to a video file)
-  - Remove unneeded tracks
-  - Replace or re-encode only some tracks
-  - Extract all tracks from a file (extract video, audio, subtitle, attachments and other tracks from one file into separate files)
-- View technical data about all tracks. Edit file metadata, per-track metadata and per-track disposition
-- Select video/audio tracks for playback. Playback mu
+## Anticloud Overlay
 
-## License
+The 12 improvements live under `anticloud/`. Run the check suite from this directory:
 
-Upstream terms preserved in `THIRD_PARTY_LICENSES/`. Overlay licensed under Anticommons 0.1.0.
+```
+python anticloud/bench/runner.py --cwd anticloud
+```
+
+## Benchmark Results
+
+The suite is recorded in `BENCH.json`; no benchmark rows were found in this package.
+
+## Licence
+
+The upstream licence is preserved in `LICENSE` and `THIRD_PARTY_LICENSES/`. The Anticloud overlay is licensed under Anticommons 0.1.0 (`ANTICOMMONS_LICENSE.md`).
 
 ## Verification
 
-Recompute the SHA3-256 of `BENCH.json` and compare to this package’s register. Any drift = invalid package.
+SHA3-256 of `BENCH.json`:
+
+```
+b192aac3d8bd93d8b3067b88f48a30a5b2e46a7fe942ebb4162fd48d47a5e6c8
+```
+
+Recompute the hash above and compare — any drift means the package has been tampered with and the seal is invalid. This is a self-assessment; no external audit has been performed and a SOC 2 / NIST independent audit is committed post-funding.

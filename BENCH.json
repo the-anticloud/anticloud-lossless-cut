@@ -2,13 +2,11 @@
  "schema": "anticloud.tier-bench/1",
  "project": "LOSSLESS_CUT",
  "source": {
-  "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\MOVIES_MEDIA\\LOSSLESS_CUT\\UPSTREAM",
   "git": {
-   "head": "5154d0fb5901ffbe12bf398d1f46f2f08c1df64e",
-   "url": "https://github.com/tazztone/losslesscut-android",
-   "branch": "main",
-   "committed_at": "2026-09-29T11:06:59+04:00",
-   "sha_verified_from": "GitHub API commits/main"
+   "url": "https://github.com/mifi/lossless-cut",
+   "head": "2610158c7861e0b96e2020cebcdd3c539ff33830",
+   "sha_verified_from": "revendor 2026-10-15: GitHub API commit lookup",
+   "previous_substitute": "https://github.com/tazztone/losslesscut-android"
   }
  },
  "metrics": {

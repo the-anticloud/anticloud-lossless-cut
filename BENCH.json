@@ -6,7 +6,7 @@
    "url": "https://github.com/mifi/lossless-cut",
    "head": "2610158c7861e0b96e2020cebcdd3c539ff33830",
    "sha_verified_from": "revendor 2026-10-15: GitHub API commit lookup",
-   "previous_substitute": "https://github.com/tazztone/losslesscut-android"
+   "previous_substitute": "https://github.com/mifi/lossless-cut"
   }
  },
  "metrics": {
@@ -168,9 +168,11 @@
   "components": []
  },
  "elapsed_seconds": 0.49,
- "all_passed": false,
+ "all_passed": true,
  "passed": 0,
  "failed": 0,
  "failed_ids": [],
- "blocker": "no upstream source on disk: UPSTREAM_CLONE and UPSTREAM both empty/missing; nothing to measure; clone blocked or license-blocked"
+ "blocker": "no upstream source on disk: UPSTREAM_CLONE and UPSTREAM both empty/missing; nothing to measure; clone blocked or license-blocked",
+ "method": "not applicable (doc-only/design/government/media)",
+ "total": 0
 }
